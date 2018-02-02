@@ -7,11 +7,15 @@
     "jsdom": "^11.6.2"
   },
   "devDependencies": {
-    "@types/jsdom": "^11.0.4"
+    "@types/jsdom": "^11.0.4",
+    "browserify": "^15.2.0"
   },
   "main": "nodejs-index.js",
   "bin": {
     "bosh-builder": "commandline-index.js"
   },
-  "browser": "browser-index.js"
+  "browser": "browser-index.js",
+  "scripts": {
+    "build-output": "browserify --standalone Mapping browser-index.js -o bundle.js"
+  }
 }

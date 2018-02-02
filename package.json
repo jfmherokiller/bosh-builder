@@ -2,10 +2,16 @@
   "name": "bosh-builder",
   "version": "0.0.1",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "is-valid-path": "^0.1.1"
+    "commander": "^2.13.0",
+    "is-valid-path": "^0.1.1",
+    "jsdom": "^11.6.2"
   },
   "devDependencies": {
-    "@types/cheerio": "^0.22.7"
-  }
+    "@types/jsdom": "^11.0.4"
+  },
+  "main": "nodejs-index.js",
+  "bin": {
+    "bosh-builder": "commandline-index.js"
+  },
+  "browser": "browser-index.js"
 }

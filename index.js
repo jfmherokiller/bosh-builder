@@ -2,16 +2,14 @@ const spriteMappings = require("./spriteSheetMappings");
 const generateBBox = require("./generateBoundingBoxes");
 /**
  *
- * @param Svgstring
+ * @param spritesheetName {String}
  * @param documentImplementation
  */
-function entrypoint(Svgstring,documentImplementation) {
-    const SpriteMap = spriteMappings.MappingFunction(Svgstring,documentImplementation);
-    const BoundingBox = generateBBox(documentImplementation);
-    const fabcanvas = new fabric.StaticCanvas(null,{ width: 200, height: 200 });
+function entrypoint(spritesheetName,documentImplementation) {
+    const SpriteMap = spriteMappings.MappingFunction(spritesheetName,documentImplementation);
+    generateBBox(documentImplementation);
     return {
         SpriteMaps:SpriteMap,
-        boundingBox:BoundingBox
     }
 }
 module.exports = entrypoint;

@@ -199,7 +199,7 @@ function Mapping(spritesheetId, document) {
     }
 
     class SpriteSheet {
-        constructor(id, doc, image) {
+        constructor(id, doc) {
             this.id = id; // whatever to use to identify this spritesheet, like a url
             //this.image = image;
             this.mappings = getSpriteSheetMappings(doc);

@@ -2,6 +2,10 @@
   "name": "bosh-builder",
   "version": "0.0.1",
   "dependencies": {
-    
+    "cheerio": "^1.0.0-rc.2",
+    "is-valid-path": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.7"
   }
 }
